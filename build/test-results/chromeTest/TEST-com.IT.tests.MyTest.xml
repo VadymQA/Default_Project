@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.IT.tests.MyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-05T07:07:16" hostname="DESKTOP-S8N2Q8P" time="5.776">
+<testsuite name="com.IT.tests.MyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-05T10:40:07" hostname="DESKTOP-S8N2Q8P" time="9.341">
   <properties/>
-  <testcase name="testName" classname="com.IT.tests.MyTest" time="5.776"/>
-  <system-out><![CDATA[2020-04-05 10:07:16,133 INFO LoginHelper 9-: Login user username - vadonvadim , password - Iua119911
+  <testcase name="testName" classname="com.IT.tests.MyTest" time="9.341"/>
+  <system-out><![CDATA[2020-04-05 13:40:07,732 INFO LoginHelper 9-: Login user username - vadonvadim , password - Iua119911
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
