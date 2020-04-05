@@ -1,6 +1,6 @@
 package com.IT.pages;
 
-import com.IT.common.BasePage;
+import letter.Letter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -19,11 +19,27 @@ public class MailPage extends BasePage {
     @FindBy(xpath = "//p[@class = 'send_container']//input[@name= 'send']")
     private WebElement inputSendMail;
 
-    public void writeNewMailToYourself() {
+    /*protected void writeNewMailToYourself(String subject, String body) {
         String n = linkUserEmail.getText();
         textAreaTo.sendKeys(n);
-        inputMailSubject.sendKeys("Test subject" + LocalDate.now());
-        textAreaMailBody.sendKeys("Test message body");
+
+        inputMailSubject.sendKeys(subject +LocalDate.now());
+        textAreaMailBody.sendKeys(body);
+
+        *//*inputMailSubject.sendKeys("Test subject" + LocalDate.now());
+        textAreaMailBody.sendKeys("Test message body");*//*
+        inputSendMail.click();
+    }*/
+
+    protected void writeNewMail(String subject, String body) {
+        String n = linkUserEmail.getText();
+        textAreaTo.sendKeys(n);
+
+        inputMailSubject.sendKeys(subject +LocalDate.now());
+        textAreaMailBody.sendKeys(body);
+
+        /*inputMailSubject.sendKeys("Test subject" + LocalDate.now());
+        textAreaMailBody.sendKeys("Test message body");*/
         inputSendMail.click();
     }
 }

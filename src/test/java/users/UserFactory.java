@@ -14,14 +14,14 @@ public class UserFactory {
         return new User(
                 user.getString("userName"),
                 user.getString("password"),
-                user.getString("email")
+                user.getString("letter")
         );
     }
     public static List<User> getUsers(int count) {
         List<User> collect = Stream.generate(() -> new User(
                 user.getString("userName"),
                 user.getString("password"),
-                user.getString("email")))
+                user.getString("letter")))
                 .limit(count)
                 .collect(Collectors.toList());
         return collect;

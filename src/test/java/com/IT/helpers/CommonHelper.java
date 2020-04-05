@@ -1,15 +1,15 @@
 package com.IT.helpers;
 
-import com.IT.common.BasePage;
+import com.IT.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 
 public class CommonHelper extends BasePage {
 
     public void stopApp(){
-        chromeDriver.quit();
+        driver.quit();
     }
     public WebDriver getDriver(){
-        return chromeDriver;
+        return driver;
     }
     public void wait1s() {
         try {

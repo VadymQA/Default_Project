@@ -4,6 +4,7 @@ package com.IT.tests;
 import com.IT.pages.DashboardPage;
 import com.IT.pages.LoginPage;
 import com.IT.utils.QAUtils;
+import letter.Letter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,21 +22,21 @@ public class MyTest extends BaseTest {
     public void testName() {
 
         app.loginHelper.login(validUser);
-        app.common.wait1s();
+       //app.common.wait1s();
         Assert.assertEquals(app.dashboardHelper.getLinkUserEmail(), validUser.email);
-        app.common.wait1s();
+       //app.common.wait1s();
         app.dashboardHelper.createNewMail();
-        app.common.wait1s();
-        app.mailHelper.writeNewMailToYourself();
-        app.common.wait1s();
+       //app.common.wait1s();
+        app.mailHelper.writeNewMail(validLetter);
+       //app.common.wait1s();
         //Assert.assertEquals(app.dashboardHelper.checkSuccessfulMsg(), "Письмо успешно отправлено адресатам");
         //Expected кракозябрами выводит. тест падает )
-        //app.common.wait1s();
-
+       // app.common.wait1s();
         app.dashboardHelper.goToInbox();
-        Assert.assertEquals(app.dashboardHelper.mailCheck(), "Test subject" + LocalDate.now());
+        //app.common.wait1s();
+       Assert.assertEquals(app.dashboardHelper.mailCheck(), validLetter.subject + LocalDate.now());
 
-        //отправки почты  и проверка что письмо пришло
+
 
         /*WebDriver driver = app.common.getDriver();
         driver.get("https://google.com.ua");

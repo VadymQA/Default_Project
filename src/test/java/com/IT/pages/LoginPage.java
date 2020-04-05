@@ -1,11 +1,7 @@
 package com.IT.pages;
 
-import com.IT.common.BasePage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
 
@@ -15,8 +11,14 @@ public class LoginPage extends BasePage {
 	private WebElement inputPassword;
     @FindBy(xpath = "//form[@name='lform']//input[@type='submit']")
     private WebElement btnSubmit;
+	/*@FindBy(xpath="/html/body/div[4]/div[3]/div[1]/ul/li[1]/a")
+	private WebElement test;*/
+
 
     protected void login(String login, String pass){
+     //  driver.scrollToElement(test);
+     //   driver.scrollUp();
+        //driver.sendKeysOneByOne(inputlogin, login);
         inputlogin.sendKeys(login);
         inputPassword.sendKeys(pass);
         btnSubmit.click();
