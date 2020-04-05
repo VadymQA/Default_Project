@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+}
+
+group 'March15'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    agent
+}
+
+dependencies {
+    agent "org.aspectj:aspectjweaver:1.8.0"
+    testCompile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0"
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testCompile group: 'org.testng', name: 'testng', version: '7.1.0'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.141.59'
+
+    // https://mvnrepository.com/artifact/log4j/log4j
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
+    compile 'org.testng:testng:6.9.10'
+}
+
+test.doFirst {
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+}
+
+task chromeTest(type:Test) {
+    systemProperty("driver", "chrome")
+    useTestNG {
+       suites "src\\test\\resources\\run.xml"
+    }
+}
+
+task geckoTest(type:Test) {
+    systemProperty("driver", "gecko")
+    useTestNG {
+        suites "src\\test\\resources\\run.xml"
+    }
+}
+
+task browserStackTest(type:Test) {
+    systemProperty("driver", "remotedriver")
+    useTestNG {
+        suites "src\\test\\resources\\run.xml"
+    }
+}

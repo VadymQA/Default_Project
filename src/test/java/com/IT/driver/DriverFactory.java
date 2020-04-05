@@ -34,6 +34,7 @@ public class DriverFactory {
                         + "@hub-cloud.browserstack.com/wd/hub"), caps);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
+
             }
         } else {
             System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");

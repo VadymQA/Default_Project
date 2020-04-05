@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.IT.tests.MyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-05T07:07:50" hostname="DESKTOP-S8N2Q8P" time="52.779">
+  <properties/>
+  <testcase name="testName" classname="com.IT.tests.MyTest" time="52.779"/>
+  <system-out><![CDATA[2020-04-05 10:07:50,237 INFO LoginHelper 9-: Login user username - vadonvadim , password - Iua119911
+
+]]></system-out>
+  <system-err><![CDATA[JavaScript warning: https://i3.i.ua/js/i/richtextmulti2201_v2.y3551048b.js, line 462: unreachable code after return statement
+JavaScript warning: https://i3.i.ua/js/i/richtextmulti2201_v2.y3551048b.js, line 462: unreachable code after return statement
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PMessagePort::Msg_PostMessages Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+]]></system-err>
+</testsuite>
